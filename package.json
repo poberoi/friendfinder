@@ -1,7 +1,7 @@
 {
   "name": "friendfinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "App to find compatible friends",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/poberoi/friendfinder.git"
   },
-  "author": "",
+  "author": "Puneet Oberoi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/poberoi/friendfinder/issues"
