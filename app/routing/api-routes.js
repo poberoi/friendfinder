@@ -16,6 +16,25 @@ module.exports = function(app){
   });
 
   app.post("/api/friends", function (req, res)  {
+ 
+    var closestDifference = 100;
+    var difference = 0;
+    var match;
+    
+    friendData.forEach(function(friend) {
+
+      difference = eval(friend.scores.map(function (num, index) {
+        return Math.abs(num - req.body.scores[index]);
+      }).join('+')); 
+
+      if (difference <= closestDifference) {
+        closestDifference = difference;
+        match = friend;
+      }
+
+    });
+
+    res.json(match);
 
     friendData.push(req.body);
 
